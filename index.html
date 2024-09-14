@@ -9,18 +9,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"> </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("7IHI7k9Ls--AWJzj5");
+        })(); 
+    </script>
 
 </head>
 
 <body>
 
     <header class="header">
-        <a href="#home" class="logo">Sharik COder</a>
+        <a href="#home" class="logo" onclick="clo()">Sharik COder</a>
         <i class="fa-sharp fa-solid fa-bars" id="menu-icon" onclick="opn()"></i>
 
         <nav class="navbar">
             <ul>
-                <li><a href="#home" class="active" onclick="clo()">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li> <a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
@@ -36,12 +42,14 @@
         <div class="home-content">
             <h1>Hi, It's Sharik</h1>
             <h3 data-text="Developer.">Software Developer.</h3>
-            <p>Passionate web developer. I have experience in HTML, CSS, JavaScript, and Bootstrap. I'm constantly learning and exploring new technologies to improve my skills and stay updated with industry trends.</p>
+            <p>Passionate web developer. I have experience in HTML, CSS, JavaScript, and Bootstrap. I'm constantly
+                learning and exploring new technologies to improve my skills and stay updated with industry trends.</p>
             <div class="social-icon">
                 <a href="https://www.linkedin.com/in/sharik0m/" target="_blank"><i
                         class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/SHARIK0M" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://app.netlify.com/teams/sharik0m/sites" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://app.netlify.com/teams/sharik0m/sites" target="_blank"><i
+                        class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://wa.me/+919047533809?text=Hi Sharik..." target="_blank"><i><i
                             class="fa-brands fa-square-whatsapp"></i></i></a>
             </div>
@@ -177,14 +185,12 @@
         <h2 class="heading">Contact Me</h2>
         <form class="form" action="">
             <div class="input-box">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="number" placeholder="Phone Number" required>
-                <input type="text" placeholder="Subject">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
             </div>
-            <textarea name="" cols="30" rows="10" id="" placeholder="Your Massage"></textarea>
-            <button class="btn">Send Massage</button>
-           
+            <textarea name="" cols="30" rows="10" id="message" placeholder="Your Massage"></textarea>
+            <button onclick="sendemail()" type="button" class="btn">Send Massage</button>
+
         </form>
     </section>
 
@@ -192,7 +198,8 @@
         <div class="social">
             <a href="https://www.linkedin.com/in/sharik0m/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/SHARIK0M" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://app.netlify.com/teams/sharik0m/sites" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://app.netlify.com/teams/sharik0m/sites" target="_blank"><i
+                    class="fa-brands fa-x-twitter"></i></a>
             <a href="https://wa.me/+919047533809?text=Hi Sharik..." target="_blank"><i><i
                         class="fa-brands fa-square-whatsapp"></i></i></a>
         </div>
@@ -210,7 +217,8 @@
 
 
 </body>
+
 <script src="/index.js"></script>
 
-</html>
 
+</html>
